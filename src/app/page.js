@@ -18,6 +18,8 @@ import { CiCamera } from "react-icons/ci";
 import PhotoGallerySwiper from "./components/PhotoGallerySwiper";
 import PhotoGalleryDownSlideSwiper from "./components/PhotoGalleryDownSlideSwiper";
 import PhotoGallery from "./components/PhotoGallery";
+import VideoModal from "./components/VideoModal";
+import SlideSwiper from "./components/SlideSwiper";
 
 export default function Home() {
   const [isLargeScreen, setIsLargeScreen] = useState(false);
@@ -25,6 +27,7 @@ export default function Home() {
   const [sideTab, setSideTab] = useState("all-end");
   const [tab, setTab] = useState("সমস্ত");
   const [voteArea, setVoteArea] = useState(true);
+  const [modalShow, setModalShow] = useState(false);
 
   useEffect(() => {
     const updateScreenSize = () => {
@@ -166,7 +169,11 @@ export default function Home() {
             </Row>
           </Col>
           <Col xl={3} md={4}>
-            <div className=" mt-md-0 mt-3">
+            <div
+              className=" mt-md-0 mt-3"
+              style={{ cursor: "pointer" }}
+              onClick={() => setModalShow(true)}
+            >
               <Card className="bg-dark text-white rounded-0 fs-5 fw-medium px-3 py-1">
                 Live TV
               </Card>
@@ -1460,7 +1467,7 @@ export default function Home() {
           </Col>
         </Row>
 
-        <Row className="pb-5">
+        <Row>
           <Col xl={9} md={8}>
             <Row>
               <Col sm={12}>
@@ -1499,6 +1506,7 @@ export default function Home() {
                 <div
                   style={{ width: "21rem", cursor: "pointer" }}
                   className="group position-relative"
+                  onClick={() => setModalShow(true)}
                 >
                   <Image
                     src="https://blog.nweightloss.shop/public//storage/news/673e304975dcf.webp"
@@ -1524,7 +1532,15 @@ export default function Home() {
             </div>
           </Col>
         </Row>
+
+        <Row className="pb-5">
+          <Col sm={12} className="pt-3">
+            <SlideSwiper />
+          </Col>
+        </Row>
       </Container>
+
+      <VideoModal show={modalShow} onHide={() => setModalShow(false)} />
     </>
   );
 }
