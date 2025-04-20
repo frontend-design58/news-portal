@@ -5,15 +5,16 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Marquee from "./components/Marquee";
 import "./page.module.css";
 import AppFooter from "./components/AppFooter";
+import "./main.css";
 
 export default function template({ children }) {
-   return (
-      <>
-         <AppNavbar />
-         <Breadcramb />
-         <Marquee />
-         {children}
-         <AppFooter />
-      </>
-   );
+  return (
+    <>
+      <AppNavbar />
+      <Breadcramb />
+      <Marquee />
+      {children}
+      <AppFooter />
+    </>
+  );
 }

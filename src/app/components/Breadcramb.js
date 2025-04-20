@@ -16,60 +16,33 @@ export default function Breadcramb() {
           >
             <IoHomeOutline />
           </Nav.Link>
-          <div className=" position-relative">
-            <Card className="text-secondary-emphasis fs-6  px-3 py-2">
+          <div className=" position-relative group">
+            <Card
+              className="text-secondary-emphasis fs-6 px-3 py-2 group"
+              role="button"
+              tabIndex={0}
+            >
               সাম্প্রতিক
             </Card>
-            <Card className="text-secondary-emphasis fs-6  px-3 py-2 d-none hover-d-block position-absolute top-5 left-0">
-              সাম্প্রতিক
-            </Card>
-          </div>
-          <div className=" position-relative">
-            <Card className="text-secondary-emphasis fs-6  px-3 py-2">
-              সাম্প্রতিক
-            </Card>
-            <Card className="text-secondary-emphasis fs-6  px-3 py-2 d-none hover-d-block position-absolute top-5 left-0">
-              সাম্প্রতিক
-            </Card>
-          </div>
-          <div className=" position-relative">
-            <Card className="text-secondary-emphasis fs-6  px-3 py-2">
-              সাম্প্রতিক
-            </Card>
-            <Card className="text-secondary-emphasis fs-6  px-3 py-2 d-none hover-d-block position-absolute top-5 left-0">
-              সাম্প্রতিক
-            </Card>
-          </div>
-          <div className=" position-relative">
-            <Card className="text-secondary-emphasis fs-6  px-3 py-2">
-              সাম্প্রতিক
-            </Card>
-            <Card className="text-secondary-emphasis fs-6  px-3 py-2 d-none hover-d-block position-absolute top-5 left-0">
-              সাম্প্রতিক
-            </Card>
-          </div>
-          <div className=" position-relative">
-            <Card className="text-secondary-emphasis fs-6  px-3 py-2">
-              সাম্প্রতিক
-            </Card>
-            <Card className="text-secondary-emphasis fs-6  px-3 py-2 d-none hover-d-block position-absolute top-5 left-0">
-              সাম্প্রতিক
-            </Card>
-          </div>
-          <div className=" position-relative">
-            <Card className="text-secondary-emphasis fs-6  px-3 py-2">
-              সাম্প্রতিক
-            </Card>
-            <Card className="text-secondary-emphasis fs-6  px-3 py-2 d-none hover-d-block position-absolute top-5 left-0">
-              সাম্প্রতিক
-            </Card>
-          </div>
-          <div className=" position-relative">
-            <Card className="text-secondary-emphasis fs-6  px-3 py-2">
-              সাম্প্রতিক
-            </Card>
-            <Card className="text-secondary-emphasis fs-6  px-3 py-2 d-none hover-d-block position-absolute top-5 left-0">
-              সাম্প্রতিক
+            <Card className="group-hover:d-flex group-hover:flex-column d-none position-absolute top-5 left-0 p-1 bg-light">
+              <a
+                href=""
+                className="text-secondary-emphasis fs-6 px-3 py-1 mb-1 text-center text-decoration-none btn btn-light"
+              >
+                সাম্প্রতিক
+              </a>
+              <a
+                href=""
+                className="text-secondary-emphasis fs-6 py-1 mb-1 text-center text-decoration-none btn btn-light"
+              >
+                সাম্প্রতিক
+              </a>
+              <a
+                href=""
+                className="text-secondary-emphasis fs-6 py-1 mb-1 text-center text-decoration-none btn btn-light"
+              >
+                সাম্প্রতিক
+              </a>
             </Card>
           </div>
         </Container>
